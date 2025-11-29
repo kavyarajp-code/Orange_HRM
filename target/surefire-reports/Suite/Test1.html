@@ -1,0 +1,406 @@
+<html>
+<head>
+<title>TestNG:  Test1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Nov 25 17:34:40 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>341 seconds (341062 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Saving valid personal details", "Optional[MyInfo section in OrangeHRM]"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-10d463b7=&quot;&quot; data-v-6653c066=&quot;&quot; type=&quot;submit&quot; class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot;&gt;...&lt;/button&gt; is not clickable at point (901, 578). Other element would receive the click: &lt;div data-v-d5bfe35b=&quot;&quot; class=&quot;oxd-form-loader&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8054b2af435edb6966e7402f509815b8, clickElement {id=f.9E8D9518C0F41D2C1F0536E152AED47F.d.56FC3FED78129979AAEDBAE4FD017FA5.e.105}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51818}, goog:processID: 4372, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51818/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8054b2af435edb6966e7402f509815b8)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: 8054b2af435edb6966e7402f509815b8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageObjects.myInfoPage.clicksavebutton1(myInfoPage.java:37)
+	at stepdefinition.tc8_myinfo_pdetails_valid.clickonSave(tc8_myinfo_pdetails_valid.java:56)
+	at ✽.the user clicks save button for personal details(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:9)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1182492749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1182492749'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-10d463b7=&quot;&quot; data-v-6653c066=&quot;&quot; type=&quot;submit&quot; class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot;&gt;...&lt;/button&gt; is not clickable at point (901, 578). Other element would receive the click: &lt;div data-v-d5bfe35b=&quot;&quot; class=&quot;oxd-form-loader&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8054b2af435edb6966e7402f509815b8, clickElement {id=f.9E8D9518C0F41D2C1F0536E152AED47F.d.56FC3FED78129979AAEDBAE4FD017FA5.e.105}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51818}, goog:processID: 4372, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51818/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8054b2af435edb6966e7402f509815b8)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: 8054b2af435edb6966e7402f509815b8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageObjects.myInfoPage.clicksavebutton1(myInfoPage.java:37)
+	at stepdefinition.tc8_myinfo_pdetails_valid.clickonSave(tc8_myinfo_pdetails_valid.java:56)
+	at ✽.the user clicks save button for personal details(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:9)
+</pre></div></td>
+<td>11</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Saving valid personal details", "Optional[MyInfo section in OrangeHRM]"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-10d463b7=&quot;&quot; data-v-6653c066=&quot;&quot; type=&quot;submit&quot; class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot;&gt;...&lt;/button&gt; is not clickable at point (901, 578). Other element would receive the click: &lt;div data-v-d5bfe35b=&quot;&quot; class=&quot;oxd-form-loader&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8757012a0e5f9e74b8cb27a489772d75, clickElement {id=f.E112DD9AA68AEB729461CFA24623AE7D.d.9E2AE25C6FE8A00858174B16A89487A3.e.105}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51857}, goog:processID: 12608, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51857/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8757012a0e5f9e74b8cb27a489772d75)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: 8757012a0e5f9e74b8cb27a489772d75
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageObjects.myInfoPage.clicksavebutton1(myInfoPage.java:37)
+	at stepdefinition.tc8_myinfo_pdetails_valid.clickonSave(tc8_myinfo_pdetails_valid.java:56)
+	at ✽.the user clicks save button for personal details(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:9)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace204078646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace204078646'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-10d463b7=&quot;&quot; data-v-6653c066=&quot;&quot; type=&quot;submit&quot; class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot;&gt;...&lt;/button&gt; is not clickable at point (901, 578). Other element would receive the click: &lt;div data-v-d5bfe35b=&quot;&quot; class=&quot;oxd-form-loader&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8757012a0e5f9e74b8cb27a489772d75, clickElement {id=f.E112DD9AA68AEB729461CFA24623AE7D.d.9E2AE25C6FE8A00858174B16A89487A3.e.105}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51857}, goog:processID: 12608, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51857/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8757012a0e5f9e74b8cb27a489772d75)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: 8757012a0e5f9e74b8cb27a489772d75
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageObjects.myInfoPage.clicksavebutton1(myInfoPage.java:37)
+	at stepdefinition.tc8_myinfo_pdetails_valid.clickonSave(tc8_myinfo_pdetails_valid.java:56)
+	at ✽.the user clicks save button for personal details(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:9)
+</pre></div></td>
+<td>12</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Saving valid personal details", "Optional[MyInfo section in OrangeHRM]"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-10d463b7=&quot;&quot; data-v-6653c066=&quot;&quot; type=&quot;submit&quot; class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot;&gt;...&lt;/button&gt; is not clickable at point (901, 578). Other element would receive the click: &lt;div data-v-d5bfe35b=&quot;&quot; class=&quot;oxd-form-loader&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cab918ca1520fe46574f01db14d74fee, clickElement {id=f.67FFB845CFCB77E38567A0D763DA534C.d.8D5C0625FD5320E4F829BB3CAC711155.e.106}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51901}, goog:processID: 4780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51901/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (cab918ca1520fe46574f01db14d74fee)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: cab918ca1520fe46574f01db14d74fee
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageObjects.myInfoPage.clicksavebutton1(myInfoPage.java:37)
+	at stepdefinition.tc8_myinfo_pdetails_valid.clickonSave(tc8_myinfo_pdetails_valid.java:56)
+	at ✽.the user clicks save button for personal details(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:9)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace625232315", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace625232315'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-10d463b7=&quot;&quot; data-v-6653c066=&quot;&quot; type=&quot;submit&quot; class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot;&gt;...&lt;/button&gt; is not clickable at point (901, 578). Other element would receive the click: &lt;div data-v-d5bfe35b=&quot;&quot; class=&quot;oxd-form-loader&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cab918ca1520fe46574f01db14d74fee, clickElement {id=f.67FFB845CFCB77E38567A0D763DA534C.d.8D5C0625FD5320E4F829BB3CAC711155.e.106}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51901}, goog:processID: 4780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51901/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (cab918ca1520fe46574f01db14d74fee)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: cab918ca1520fe46574f01db14d74fee
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageObjects.myInfoPage.clicksavebutton1(myInfoPage.java:37)
+	at stepdefinition.tc8_myinfo_pdetails_valid.clickonSave(tc8_myinfo_pdetails_valid.java:56)
+	at ✽.the user clicks save button for personal details(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:9)
+</pre></div></td>
+<td>14</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update invalid contact details", "Optional[MyInfo section in OrangeHRM]"</td>
+<td><div><pre>java.lang.AssertionError: Scenario failed due to exception: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: oxd-toaster_1 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51945}, goog:processID: 14088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51945/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a4dc6ce4dbf91125c522a9fc5ae34d0
+	at stepdefinition.tc9_myinfo_contact_phinvalid.phonenumberinv(tc9_myinfo_contact_phinvalid.java:78)
+	at ✽.system shows error message for invalid phone(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:24)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696870185", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696870185'><pre>java.lang.AssertionError: Scenario failed due to exception: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: oxd-toaster_1 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51945}, goog:processID: 14088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51945/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a4dc6ce4dbf91125c522a9fc5ae34d0
+	at org.testng.Assert.fail(Assert.java:97)
+	at stepdefinition.tc9_myinfo_contact_phinvalid.phonenumberinv(tc9_myinfo_contact_phinvalid.java:78)
+	at ✽.system shows error message for invalid phone(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:24)
+</pre></div></td>
+<td>23</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update invalid contact details", "Optional[MyInfo section in OrangeHRM]"</td>
+<td><div><pre>java.lang.AssertionError: Scenario failed due to exception: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: oxd-toaster_1 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52003}, goog:processID: 15060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52003/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0cf599b0978b88ad95e26f1a52949ed9
+	at stepdefinition.tc9_myinfo_contact_phinvalid.phonenumberinv(tc9_myinfo_contact_phinvalid.java:78)
+	at ✽.system shows error message for invalid phone(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:24)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace816440283", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace816440283'><pre>java.lang.AssertionError: Scenario failed due to exception: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: oxd-toaster_1 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52003}, goog:processID: 15060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52003/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0cf599b0978b88ad95e26f1a52949ed9
+	at org.testng.Assert.fail(Assert.java:97)
+	at stepdefinition.tc9_myinfo_contact_phinvalid.phonenumberinv(tc9_myinfo_contact_phinvalid.java:78)
+	at ✽.system shows error message for invalid phone(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/myinfo.feature:24)
+</pre></div></td>
+<td>24</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a new inv candidate", "Optional[Candidate section in Recruitement module]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [26ab046eb3b65975856866b621ca120a, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52103}, goog:processID: 13848, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52103/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 26ab046eb3b65975856866b621ca120a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at pageObjects.loginPage.enterUsername(loginPage.java:16)
+	at stepdefinition.tc4_recruitement_invalid.the_user_navigates_to_the_candidate_section_in_Recruitement_module(tc4_recruitement_invalid.java:39)
+	at ✽.the user navigates to the candidate section in Recruitement module for inv(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/recruitement.feature:15)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace720242436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace720242436'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [26ab046eb3b65975856866b621ca120a, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52103}, goog:processID: 13848, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52103/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 26ab046eb3b65975856866b621ca120a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at pageObjects.loginPage.enterUsername(loginPage.java:16)
+	at stepdefinition.tc4_recruitement_invalid.the_user_navigates_to_the_candidate_section_in_Recruitement_module(tc4_recruitement_invalid.java:39)
+	at ✽.the user navigates to the candidate section in Recruitement module for inv(file:///C:/Users/Administrator/Desktop/Maven%20test/capstone_orangeHRM/features/recruitement.feature:15)
+</pre></div></td>
+<td>18</td>
+<td>testrunner@8b96fde</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Log in with valid credentials", "Optional[logging  in]"</td>
+<td></td>
+<td>6</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Log in with invalid credentials", "Optional[logging  in]"</td>
+<td></td>
+<td>4</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Saving valid personal details", "Optional[MyInfo section in OrangeHRM]"</td>
+<td></td>
+<td>11</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a new candidate", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>15</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Job Title", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>37</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Job Title", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>26</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Job Title", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>21</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Job Title", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>19</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Vacancy", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>19</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Vacancy", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>19</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Vacancy", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>21</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search candidate by Vacancy", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>20</td>
+<td>testrunner@8b96fde</td></tr>
+<tr>
+<td title='testrunner.runScenario()'><b>runScenario</b><br>Test class: testrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reset candidate search form", "Optional[Candidate section in Recruitement module]"</td>
+<td></td>
+<td>10</td>
+<td>testrunner@8b96fde</td></tr>
+</table><p>
+</body>
+</html>
